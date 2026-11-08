@@ -1,0 +1,1219 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<title>Plan de 90 días para meter la IA en tu negocio · Sell Your AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 18mm 17mm 18mm 17mm; }
+@page portada { margin: 0; }
+:root { --negro:#0E0E0D; --papel:#F4F1EA; --oro:#A8884A; --gris:#5b5850; --linea:#d9d3c5; }
+* { box-sizing: border-box; }
+html { background: var(--papel); }
+body { margin:0; font-family: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif; color: var(--negro);
+  background: var(--papel); font-size: 10pt; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+a { color: var(--oro); text-decoration: none; }
+.portada { page: portada; width: 210mm; height: 297mm; background: var(--negro); color: var(--papel);
+  padding: 26mm 22mm; display: flex; flex-direction: column; justify-content: space-between; page-break-after: always; }
+.portada .marca { letter-spacing: .32em; text-transform: uppercase; font-size: 9pt; color: var(--oro); font-weight: 600; }
+.portada h1 { font-size: 44pt; line-height: 1.02; letter-spacing: -0.035em; font-weight: 700; margin: 0 0 10mm; }
+.portada h1 span { color: var(--oro); }
+.portada .bajada { font-size: 13pt; color: #cfc9bc; max-width: 140mm; font-weight: 400; }
+.portada .cifras { display: flex; gap: 12mm; margin-top: 14mm; }
+.portada .cifras div { border-top: 1px solid var(--oro); padding-top: 3mm; }
+.portada .cifras b { display:block; font-size: 26pt; font-weight: 700; letter-spacing: -0.03em; }
+.portada .cifras small { color: #a9a395; font-size: 9pt; text-transform: uppercase; letter-spacing: .12em; }
+.portada .orden { font-size: 9.5pt; color: #a9a395; letter-spacing: .04em; }
+.portada .orden b { color: var(--papel); font-weight: 600; }
+.portada .pie { display:flex; justify-content: space-between; align-items: flex-end; font-size: 9pt; color: #a9a395; }
+.portada .pie strong { color: var(--papel); font-size: 12pt; letter-spacing: -0.01em; }
+.contenido h2.seccion { font-size: 20pt; letter-spacing: -0.03em; margin: 8mm 0 3mm; }
+.contenido h3.sub { font-size: 12.5pt; margin: 6mm 0 2mm; letter-spacing: -0.01em; }
+.contenido h2.seccion:first-child { margin-top: 0; }
+table { width: 100%; border-collapse: collapse; margin: 3mm 0 4mm; font-size: 9pt; page-break-inside: avoid; }
+th { text-align: left; background: var(--negro); color: var(--papel); font-weight: 600; padding: 2mm 2.5mm; }
+td { border-bottom: 1px solid var(--linea); padding: 2mm 2.5mm; vertical-align: top; }
+.fase { page-break-before: always; background: var(--negro); color: var(--papel); border-radius: 4mm;
+  padding: 16mm 14mm; margin-bottom: 8mm; }
+.fase-num { color: var(--oro); letter-spacing: .3em; text-transform: uppercase; font-size: 9pt; font-weight: 600; }
+.fase h2 { font-size: 40pt; letter-spacing: -0.04em; margin: 3mm 0 1mm; line-height: 1; }
+.fase-pasos { color: #a9a395; font-size: 10pt; margin-bottom: 6mm; }
+.fase-intro { font-size: 11.5pt; color: #e3ded2; max-width: 150mm; margin: 0; }
+.paso { position: relative; border-top: 2px solid var(--negro); padding: 4mm 0 2mm 16mm; margin: 0 0 6mm; }
+.paso h3 { font-size: 14pt; letter-spacing: -0.02em; line-height: 1.2; margin: 0 0 1mm; page-break-after: avoid; }
+.paso-num { position: absolute; left: 0; top: 4mm; width: 11mm; height: 11mm; border-radius: 50%;
+  background: var(--oro); color: var(--negro); font-weight: 700; font-size: 11pt; display:flex; align-items:center; justify-content:center; }
+.meta { color: var(--oro); font-size: 8.5pt; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 2.5mm; }
+.paso p { margin: 0 0 2mm; }
+.prompt { background: var(--negro); color: var(--papel); border-radius: 2.5mm; padding: 3mm 4mm 3.5mm; margin: 1mm 0 3mm; page-break-inside: avoid; }
+.prompt .etq { display:block; color: var(--oro); font-size: 7.5pt; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; margin-bottom: 1.5mm; }
+.prompt pre { margin: 0; white-space: pre-wrap; font-family: 'Inter', -apple-system, sans-serif; font-size: 8.8pt; line-height: 1.45; }
+ul, ol { margin: 0 0 2.5mm; padding-left: 5mm; }
+ul.check { list-style: none; padding-left: 0; page-break-inside: avoid; }
+ul.check li { position: relative; padding-left: 6mm; margin-bottom: 1mm; }
+ul.check li::before { content: ""; position: absolute; left: 0; top: 1.1mm; width: 3.2mm; height: 3.2mm; border: 1.3px solid var(--oro); border-radius: .7mm; }
+p.error { border-left: 3px solid var(--oro); background: #ebe5d8; padding: 2mm 3mm; border-radius: 0 2mm 2mm 0; }
+code { background: #e7e1d3; padding: 0 1mm; border-radius: 1mm; font-size: 9pt; }
+strong { font-weight: 650; }
+</style></head><body>
+<section class="portada">
+  <div class="marca">Sell Your AI · Recurso gratuito</div>
+  <div>
+    <h1>Plan de 90 días para meter la IA <span>en tu negocio</span></h1>
+    <div class="bajada">El orden exacto, paso a paso, con la herramienta, el prompt listo para pegar, la checklist y el error típico de cada día.</div>
+    <div class="cifras">
+      <div><b>5</b><small>fases</small></div>
+      <div><b>60</b><small>pasos</small></div>
+      <div><b>90</b><small>días</small></div>
+    </div>
+  </div>
+  <div class="orden"><b>Medición</b> → <b>Operaciones</b> → <b>Captación</b> → <b>Crecimiento</b> → <b>Libertad</b><br>Un paso al día, de lunes a viernes. Fines de semana libres.</div>
+  <div class="pie"><div><strong>Sell Your AI</strong><br>Hecho por Denis Corral</div><div>sellyourai.io</div></div>
+</section><main class="contenido"><h2 class="seccion">Antes de empezar</h2>
+<p>La mayoría de dueños de negocio empiezan la IA por el final: anuncios, contenido, más clientes. Es echar gasolina a un motor roto. Si no sabes tus números, si tus procesos viven en tu cabeza y si los leads se te enfrían en el WhatsApp, más clientes solo traen más caos.</p>
+<p>Este plan va en el orden contrario, el que funciona:</p>
+<ol>
+<li><strong>Medición</strong> (pasos 1 a 12): saber tus números de verdad.</li>
+<li><strong>Operaciones</strong> (pasos 13 a 24): que el negocio funcione sin que lo sostengas tú a mano.</li>
+<li><strong>Captación</strong> (pasos 25 a 36): que ningún lead se pierda por no contestar a tiempo.</li>
+<li><strong>Crecimiento</strong> (pasos 37 a 48): ahora sí, más clientes y que se queden.</li>
+<li><strong>Libertad</strong> (pasos 49 a 60): que el negocio te dé tiempo para decidir, no que te lo quite.</li>
+</ol>
+<h3 class='sub'>Cómo se usa</h3>
+<ul>
+<li><strong>Un paso al día, de lunes a viernes.</strong> 12 semanas = 60 días laborables, unos 90 días naturales. Los fines de semana no se toca.</li>
+<li><strong>Cada paso trae lo mismo:</strong> objetivo, cómo hacerlo con IA (la herramienta y el prompt listo para pegar), una checklist y el error típico para que no lo cometas. El tiempo estimado está al lado del título.</li>
+<li><strong>Si un paso no aplica a tu negocio,</strong> adáptalo o sáltalo y sigue. Mejor un paso adaptado hecho que uno perfecto pendiente.</li>
+<li><strong>Si no te apetece leerlo,</strong> pásale este documento entero a tu IA (Claude, ChatGPT o la que uses) y dile: «Eres mi guía para este plan. Pregúntame lo que necesites de mi negocio y dame cada día el paso que toca». Si usas Claude Code, instala la skill y lo hace ella sola (mira el README).</li>
+<li><strong>En los prompts,</strong> lo que va entre corchetes <code>[así]</code> lo cambias por tus datos. Antes de pegar datos de clientes en cualquier IA, quita nombres, teléfonos y DNI si no hacen falta.</li>
+</ul>
+<h3 class='sub'>Calendario</h3>
+<table><thead><tr><th>Semanas</th><th>Fase</th><th>Pasos</th></tr></thead><tbody><tr><td>1 a 3 (hasta el martes)</td><td>1 · Medición</td><td>1 a 12</td></tr><tr><td>3 (miércoles) a 5 (jueves)</td><td>2 · Operaciones</td><td>13 a 24</td></tr><tr><td>5 (viernes) a 8 (lunes)</td><td>3 · Captación</td><td>25 a 36</td></tr><tr><td>8 (martes) a 10 (miércoles)</td><td>4 · Crecimiento</td><td>37 a 48</td></tr><tr><td>10 (jueves) a 12 (viernes)</td><td>5 · Libertad</td><td>49 a 60</td></tr></tbody></table>
+<h3 class='sub'>Herramientas y lo que cuestan</h3>
+<p>Solo te cuesta tu tiempo y las herramientas. Precios aproximados consultados el 8 de noviembre de 2026 en las páginas de precios y en comparativas de 2026. Cambian a menudo y dependen del país y de si pagas al mes o al año: compruébalos antes de contratar.</p>
+<table><thead><tr><th>Herramienta</th><th>Para qué</th><th>Precio aproximado al mes</th></tr></thead><tbody><tr><td>Claude Pro</td><td>El cerebro de todo: análisis, documentos, skills, Claude Code</td><td>20 $ + IVA, unos 22 €</td></tr><tr><td>n8n Cloud Starter</td><td>Automatizaciones que conectan tus herramientas</td><td>24 € (20 € pagando al año). Alternativa: instalarlo en un servidor propio por unos 5-10 €</td></tr><tr><td>HubSpot Sales Hub Starter</td><td>CRM: dónde vive cada lead y cada cliente</td><td>unos 20 € por usuario (hay plan gratuito para empezar)</td></tr><tr><td>ManyChat Pro</td><td>Responder en Instagram, Facebook y WhatsApp de forma automática</td><td>39 $ (unos 34 €) con 2.500 contactos activos; 29 $ pagando al año</td></tr><tr><td>API de Claude (pago por uso)</td><td>Que tus automatizaciones y agentes piensen solos</td><td>pon un tope de 30 € al mes en la consola de Anthropic</td></tr><tr><td>Google Sheets y Looker Studio</td><td>Hojas de números y cuadro de mando</td><td>gratis con cuenta de Google</td></tr><tr><td>Fathom</td><td>Grabar y resumir llamadas</td><td>plan gratuito</td></tr></tbody></table>
+<p><strong>Total: entre 130 y 150 € al mes</strong> con un solo usuario en el CRM, o unos 100 € si empiezas con HubSpot gratis y n8n en tu propio servidor. Con margen para más consumo de API, más usuarios o una herramienta de diseño, te quedas en <strong>unos 200 € al mes</strong>. No incluye lo que inviertas en anuncios (paso 43): eso es presupuesto de publicidad, aparte.</p>
+<h3 class='sub'>Una regla antes del paso 1</h3>
+<p>La IA se equivoca. Revisa siempre lo que te devuelve antes de mandarlo a un cliente, y no dejes que ningún agente cobre, pague, borre o envíe nada importante sin tu permiso hasta que lleve semanas funcionando bien (lo verás en la fase 5).</p>
+<section class="fase"><div class="fase-num">Fase 1 de 5</div><h2>Medición</h2><div class="fase-pasos">Pasos 1 a 12</div><p class="fase-intro">Sin números, cualquier decisión es una opinión. En estas dos semanas y media vas a saber cuánto ganas de verdad, qué te deja cada cosa que vendes, por dónde entran los clientes y, sobre todo, dónde se te va el tiempo. Al final tendrás tus tres fugas más caras: lo que vas a arreglar con IA en el resto del plan.</p></section>
+<section class="paso"><div class="paso-num">1</div><h3>Tus ingresos reales de los últimos 12 meses</h3>
+<div class="meta">Fase 1 · Semana 1, lunes · 45 min</div>
+<p><strong>Objetivo:</strong> tener en una sola hoja lo que ha entrado cada mes durante el último año, separado por producto o servicio.</p>
+<p><strong>Cómo hacerlo con IA:</strong> descarga de tu banco o de tu programa de facturación los movimientos o facturas del último año en CSV o Excel. Ábrelo en Claude (arrastra el archivo al chat) y pega este prompt. Pide que te devuelva la tabla y pásala a Google Sheets.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Te paso las facturas/movimientos de mi negocio de los últimos 12 meses. Mi negocio es [qué vendes].
+1. Quédate solo con los ingresos de clientes (quita traspasos, devoluciones de Hacienda, préstamos).
+2. Agrúpalos por mes y por producto o servicio: [lista de lo que vendes].
+3. Devuélveme una tabla: mes | servicio | ingresos sin IVA | número de ventas.
+4. Debajo, el total del año, la media mensual, el mejor y el peor mes.
+Si hay movimientos que no sabes clasificar, ponlos aparte en una lista y pregúntame. No inventes nada.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo el archivo de los últimos 12 meses descargado</li>
+<li>La tabla por mes y servicio está en Google Sheets</li>
+<li>He revisado los movimientos dudosos que la IA no supo clasificar</li>
+<li>Sé mi media mensual de ingresos sin IVA</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> mezclar ingresos con IVA y sin IVA, o contar como venta un traspaso entre tus cuentas. Todo sin IVA y solo dinero de clientes.</p>
+</section>
+<section class="paso"><div class="paso-num">2</div><h3>Lo que te deja cada cosa que vendes</h3>
+<div class="meta">Fase 1 · Semana 1, martes · 60 min</div>
+<p><strong>Objetivo:</strong> saber el margen real de cada producto o servicio, no solo lo que facturas.</p>
+<p><strong>Cómo hacerlo con IA:</strong> reúne los costes directos de cada servicio (material, horas de empleados, comisiones, plataformas, desplazamientos). Si no los tienes apuntados, estímalos con la IA, que te hará las preguntas.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Quiero calcular el margen de cada cosa que vendo. Mis servicios y precios son: [lista con precios].
+Hazme las preguntas que necesites, una a una, para estimar el coste directo de cada uno
+(materiales, horas de personal y su coste por hora, comisiones, envíos, software que se usa solo para ese servicio).
+Al final dame una tabla: servicio | precio sin IVA | coste directo | margen en € | margen en % | ventas al año | margen total al año.
+Ordénala por margen total al año y dime en dos frases qué te llama la atención.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo el coste directo de cada servicio (real o estimado y marcado como estimado)</li>
+<li>Sé el margen en euros y en porcentaje de cada uno</li>
+<li>Sé qué servicio me deja más dinero al año y cuál menos</li>
+<li>La tabla está en la misma hoja que el paso 1</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> no contar tus propias horas como coste. Si un servicio te come 10 horas a ti, esas horas valen dinero aunque no te las pagues.</p>
+</section>
+<section class="paso"><div class="paso-num">3</div><h3>Costes fijos y punto de equilibrio</h3>
+<div class="meta">Fase 1 · Semana 1, miércoles · 45 min</div>
+<p><strong>Objetivo:</strong> saber cuánto necesitas facturar cada mes solo para cubrir gastos.</p>
+<p><strong>Cómo hacerlo con IA:</strong> saca del banco los gastos fijos de los últimos 3 meses (alquiler, nóminas, seguros, gestoría, software, cuota de autónomos). Pásaselos a Claude con este prompt.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Estos son los gastos de mi negocio de los últimos 3 meses: [pega o adjunta].
+1. Separa gastos fijos (se pagan vendas o no) de variables (dependen de las ventas).
+2. Calcula la media mensual de gastos fijos.
+3. Con mi margen medio del [X] % (sale de mi tabla de márgenes), calcula cuánto tengo que facturar al mes para no perder dinero.
+4. Lista las suscripciones y servicios que se repiten cada mes, con su importe, para revisarlas después.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Gastos fijos separados de los variables</li>
+<li>Sé mi gasto fijo mensual medio</li>
+<li>Sé mi punto de equilibrio en euros al mes</li>
+<li>Tengo la lista de suscripciones guardada para el paso 10</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> olvidar los pagos trimestrales o anuales (seguros, impuestos, dominios). Divídelos entre los meses que cubren y súmalos.</p>
+</section>
+<section class="paso"><div class="paso-num">4</div><h3>Dibuja tu embudo de principio a fin</h3>
+<div class="meta">Fase 1 · Semana 1, jueves · 45 min</div>
+<p><strong>Objetivo:</strong> tener por escrito el camino que hace una persona desde que te descubre hasta que paga y repite.</p>
+<p><strong>Cómo hacerlo con IA:</strong> cuéntaselo a Claude en voz alta (usa el dictado del móvil o del ordenador) como si se lo explicaras a un socio nuevo. Que te lo ordene.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Te voy a contar cómo me llegan los clientes y qué pasa hasta que me pagan. Escúchame entero y luego:
+1. Dibuja mi embudo como una lista de etapas (por ejemplo: me descubre, me escribe, le respondo, presupuesto, compra, repite).
+2. Para cada etapa: qué hace el cliente, qué hago yo, qué herramienta uso y cuánto tardo.
+3. Marca las etapas donde depende solo de mí y las que no tengo medidas.
+4. Hazme 3 preguntas sobre lo que no te ha quedado claro.
+Mi explicación: [habla o escribe aquí].</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Mi embudo está escrito en etapas</li>
+<li>Cada etapa tiene responsable y herramienta</li>
+<li>He marcado las etapas que dependen solo de mí</li>
+<li>He marcado las etapas de las que no tengo ningún dato</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> dibujar el embudo que te gustaría tener, no el que tienes. Si los presupuestos se mandan «cuando puedo», se escribe así.</p>
+</section>
+<section class="paso"><div class="paso-num">5</div><h3>Cuántos pasan de cada etapa a la siguiente</h3>
+<div class="meta">Fase 1 · Semana 1, viernes · 60 min</div>
+<p><strong>Objetivo:</strong> poner un número a cada etapa del embudo del último trimestre: cuántos te escriben, cuántos piden presupuesto, cuántos compran.</p>
+<p><strong>Cómo hacerlo con IA:</strong> cuenta lo que puedas de tus fuentes (WhatsApp, correo, Instagram, agenda, facturas). Donde no haya datos, haz una estimación honesta y márcala. Claude te ayuda a calcular.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Este es mi embudo: [pega el del paso 4]. Datos de los últimos 3 meses:
+- Contactos o mensajes nuevos: [nº o estimación]
+- Presupuestos o llamadas: [nº]
+- Ventas: [nº]
+- Clientes que repitieron: [nº]
+Calcula la conversión entre cada etapa, dime cuál es la etapa donde más gente se pierde
+y cuánto facturaría de más al mes si esa etapa mejorara 5 puntos, con mi ticket medio de [X] €.
+Marca qué números son estimaciones mías.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo un número (real o estimado) en cada etapa</li>
+<li>Sé la conversión entre etapas</li>
+<li>Sé en qué etapa se me escapa más gente</li>
+<li>He anotado qué datos me faltan para medirlos a partir de ahora</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> saltarte el paso porque «no tengo datos». Una estimación honrada hoy vale más que un dato perfecto dentro de seis meses.</p>
+</section>
+<section class="paso"><div class="paso-num">6</div><h3>Lo que te cuesta un cliente y lo que te deja</h3>
+<div class="meta">Fase 1 · Semana 2, lunes · 45 min</div>
+<p><strong>Objetivo:</strong> saber cuánto te cuesta conseguir un cliente nuevo y cuánto dinero te deja a lo largo del tiempo.</p>
+<p><strong>Cómo hacerlo con IA:</strong> suma lo que gastaste en conseguir clientes el último trimestre (anuncios, comisiones, ferias, tu tiempo de venta) y cruza con las ventas de clientes nuevos.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>En los últimos 3 meses gasté en captar clientes: [anuncios X €, comisiones X €, otros X €]
+y dediqué unas [X] horas a vender (valora mi hora en [X] €). Conseguí [X] clientes nuevos.
+Mi ticket medio es [X] €, mi margen medio [X] % y un cliente me compra de media [X] veces en [X] meses.
+1. Calcula el coste de conseguir un cliente, con y sin mis horas.
+2. Calcula el margen que me deja un cliente durante toda su relación conmigo.
+3. Dime la relación entre las dos cifras y si me puedo permitir gastar más en captar.
+Explica cada cálculo en una línea.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Sé lo que me cuesta un cliente nuevo</li>
+<li>Sé el margen que me deja un cliente durante toda la relación</li>
+<li>He incluido mis horas de venta en el cálculo</li>
+<li>Sé si puedo invertir más en captación o no</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> calcular con la facturación en vez de con el margen. Un cliente que te paga 1.000 € con un 20 % de margen te deja 200 €, no 1.000 €.</p>
+</section>
+<section class="paso"><div class="paso-num">7</div><h3>Reconstruye tu última semana hora a hora</h3>
+<div class="meta">Fase 1 · Semana 2, martes · 60 min</div>
+<p><strong>Objetivo:</strong> ver en qué se te fueron de verdad las horas la semana pasada.</p>
+<p><strong>Cómo hacerlo con IA:</strong> abre tu calendario, tu correo enviado, los chats de WhatsApp y el historial de llamadas de la semana pasada. Con eso, Claude te monta la semana. Si prefieres, exporta el calendario y adjúntalo.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Ayúdame a reconstruir mi semana pasada. Te paso mi calendario y lo que recuerdo de cada día: [pega o adjunta].
+Pregúntame día por día por los huecos que no estén en el calendario (mensajes, llamadas, tareas sueltas).
+Al final, dame una tabla: día | franja horaria | tarea | categoría (vender, atender clientes, producir/entregar,
+administración, gestionar equipo, apagar fuegos, otros) | horas.
+Y un resumen con las horas totales por categoría y el porcentaje de cada una.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo la semana reconstruida con todas las franjas</li>
+<li>Cada tarea tiene categoría</li>
+<li>Sé cuántas horas trabajé en total</li>
+<li>Sé en qué categoría se me va más tiempo</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> apuntar solo las reuniones. Lo que se come el tiempo son los cinco minutos de WhatsApp repetidos cuarenta veces al día.</p>
+</section>
+<section class="paso"><div class="paso-num">8</div><h3>Solo yo, delegable o automatizable</h3>
+<div class="meta">Fase 1 · Semana 2, miércoles · 45 min</div>
+<p><strong>Objetivo:</strong> clasificar cada tarea de tu semana según quién debería hacerla.</p>
+<p><strong>Cómo hacerlo con IA:</strong> pásale la tabla del paso 7 a Claude.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Esta es mi semana real: [pega la tabla del paso 7]. Mi negocio es [qué haces] y mi equipo es [quién hay].
+Clasifica cada tarea en:
+- SOLO YO: necesita mi criterio, mi relación o mi firma.
+- DELEGABLE: la podría hacer una persona con un buen procedimiento.
+- AUTOMATIZABLE: la puede hacer una herramienta o la IA con poca supervisión.
+Para las automatizables, di con qué tipo de herramienta (IA, automatización, CRM, plantilla).
+Total de horas por grupo y las 5 tareas automatizables o delegables que más horas suman.
+Sé estricto: si dudo de que algo sea «solo yo», ponlo en delegable y explícame por qué.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Todas las tareas están clasificadas</li>
+<li>Sé cuántas horas a la semana podría quitarme de encima</li>
+<li>Tengo el top 5 de tareas que más tiempo me roban</li>
+<li>He discutido con la IA las que yo creía «solo yo»</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> creer que casi todo es «solo yo». Casi nunca lo es; lo que pasa es que no está escrito cómo se hace. Eso lo arreglas en la fase 2.</p>
+</section>
+<section class="paso"><div class="paso-num">9</div><h3>Cuánto tardas en contestar</h3>
+<div class="meta">Fase 1 · Semana 2, jueves · 45 min</div>
+<p><strong>Objetivo:</strong> medir cuánto tarda tu negocio en responder a un cliente o a alguien que pregunta por primera vez.</p>
+<p><strong>Cómo hacerlo con IA:</strong> revisa los últimos 20 mensajes de gente nueva (WhatsApp, Instagram, correo, formulario web) y apunta la hora del mensaje y la de tu respuesta. Haz una prueba: escríbete desde otro número o pide a un amigo que pregunte como cliente. Luego, que Claude lo analice.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Estos son los tiempos de respuesta de mi negocio a 20 contactos nuevos: [canal | hora de su mensaje | hora de mi respuesta | ¿compró?].
+1. Calcula el tiempo medio y el peor caso por canal.
+2. Mira si los que compraron recibieron respuesta más rápida que los que no.
+3. Dime en qué franjas horarias o días respondemos peor.
+No saques conclusiones fuertes si hay pocos datos; dímelo.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>He medido 20 respuestas reales</li>
+<li>He hecho la prueba de cliente misterioso</li>
+<li>Sé mi tiempo medio de respuesta por canal</li>
+<li>Sé en qué momentos se quedan mensajes sin contestar</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> medir solo el horario de oficina. Mucha gente escribe por la noche y en fin de semana, y ese mensaje sin contestar hasta el lunes también cuenta.</p>
+</section>
+<section class="paso"><div class="paso-num">10</div><h3>Qué herramientas pagas y cuáles sobran</h3>
+<div class="meta">Fase 1 · Semana 2, viernes · 30 min</div>
+<p><strong>Objetivo:</strong> revisar todo el software que pagas, cortar lo que no usas y liberar presupuesto para las herramientas de este plan.</p>
+<p><strong>Cómo hacerlo con IA:</strong> usa la lista de suscripciones del paso 3.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Estas son las suscripciones y programas que pago cada mes: [lista con importe].
+Para cada una, pregúntame si la uso, cuánto y para qué. Después:
+1. Marca las que puedo cancelar, las que se solapan entre sí y las que debería mantener.
+2. Calcula el ahorro mensual si cancelo las que sobran.
+3. Dime cuáles podrían sustituirse por Claude, n8n, HubSpot o Google Sheets sin perder nada.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo la lista completa de lo que pago</li>
+<li>He cancelado (o apuntado para cancelar) lo que no uso</li>
+<li>Sé cuánto ahorro al mes</li>
+<li>Sé qué herramientas actuales se quedan en el plan</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> contratar las herramientas nuevas sin cancelar las viejas. Acabas pagando dos CRM y no usando ninguno.</p>
+</section>
+<section class="paso"><div class="paso-num">11</div><h3>Tus 5 números de cada semana</h3>
+<div class="meta">Fase 1 · Semana 3, lunes · 45 min</div>
+<p><strong>Objetivo:</strong> elegir los cinco números que vas a mirar cada lunes y montar la hoja donde se apuntan.</p>
+<p><strong>Cómo hacerlo con IA:</strong> con todo lo que has medido, Claude te propone los números y la hoja.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Este es el resumen de mis números: [ingresos, márgenes, embudo, coste por cliente, tiempo de respuesta, horas del dueño].
+Propón los 5 números que debería revisar cada semana para saber si el negocio va bien
+(al menos uno de dinero, uno de captación, uno de clientes y uno de mi tiempo).
+Para cada uno: cómo se calcula, de dónde saco el dato y qué valor sería una señal de alarma.
+Después dame la estructura de una hoja de Google Sheets con una fila por semana para apuntarlos,
+con las fórmulas exactas para las columnas que se calculan solas.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>He elegido mis 5 números</li>
+<li>Sé de dónde sale cada dato</li>
+<li>La hoja semanal está creada en Google Sheets</li>
+<li>He apuntado los valores de esta semana como punto de partida</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> elegir quince números. Con quince no miras ninguno. Cinco, y que cada uno te diga qué hacer si se tuerce.</p>
+</section>
+<section class="paso"><div class="paso-num">12</div><h3>Revisión de la fase 1: tus tres fugas más caras</h3>
+<div class="meta">Fase 1 · Semana 3, martes · 60 min</div>
+<p><strong>Objetivo:</strong> cerrar la fase con un diagnóstico claro: las tres cosas que más dinero o tiempo te cuestan y que vas a arreglar en las fases siguientes.</p>
+<p><strong>Cómo hacerlo con IA:</strong> junta todo lo de esta fase en un documento y pásaselo a Claude.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Te paso todo lo que he medido de mi negocio estas dos semanas: [pega o adjunta los resultados de los pasos 1 a 11].
+Actúa como un consultor directo que no me quiere caer bien:
+1. Dime las 3 fugas que más me cuestan, en euros al mes o en horas a la semana, con el cálculo a la vista.
+2. Para cada una, en qué fase del plan se arregla (operaciones, captación, crecimiento o libertad).
+3. Dime qué dato importante sigue faltando.
+4. Escribe un resumen de media página de cómo está mi negocio hoy para compararlo dentro de 90 días.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo mis 3 fugas con su coste calculado</li>
+<li>He guardado el resumen del «antes» para el paso 60</li>
+<li>Mi hoja de números está completa y la entiendo</li>
+<li>He bloqueado en el calendario una hora cada lunes para revisar mis 5 números</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> pasar a la siguiente fase sin terminar esta porque «ya me hago una idea». Sin el «antes», en el paso 60 no podrás demostrar qué ha cambiado.</p>
+</section>
+<section class="fase"><div class="fase-num">Fase 2 de 5</div><h2>Operaciones</h2><div class="fase-pasos">Pasos 13 a 24</div><p class="fase-intro">Ahora que sabes dónde se va el tiempo, toca recuperarlo. En esta fase sacas los procesos de tu cabeza, los conviertes en documentos que cualquiera (persona o IA) puede seguir y automatizas las tareas que se repiten. Es la fase que más horas te devuelve.</p></section>
+<section class="paso"><div class="paso-num">13</div><h3>La lista de todo lo que se repite</h3>
+<div class="meta">Fase 2 · Semana 3, miércoles · 45 min</div>
+<p><strong>Objetivo:</strong> tener la lista completa de procesos de tu negocio: todo lo que se hace más de una vez al mes.</p>
+<p><strong>Cómo hacerlo con IA:</strong> usa tu semana del paso 7 y tu embudo del paso 4 como punto de partida.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Mi negocio es [qué haces]. Te paso mi semana real y mi embudo: [pega pasos 4 y 7].
+Haz la lista de todos los procesos que se repiten en un negocio como el mío, agrupados en:
+captación, venta, entrega del servicio, atención al cliente, cobros y administración, equipo.
+Para cada uno: quién lo hace hoy, cada cuánto y cuánto tarda (pregúntame lo que no sepas).
+Añade los que probablemente hago sin darme cuenta (por ejemplo, perseguir pagos o pasar datos de una app a otra).</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo la lista de procesos agrupada por área</li>
+<li>Cada proceso tiene responsable, frecuencia y duración</li>
+<li>He añadido los procesos «invisibles» que hago sin pensar</li>
+<li>La lista está guardada en un documento compartido</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> listar solo los procesos grandes. Los que más tiempo comen suelen ser pequeños y frecuentes: copiar datos, mandar recordatorios, responder lo mismo.</p>
+</section>
+<section class="paso"><div class="paso-num">14</div><h3>Los 5 procesos que más horas te comen</h3>
+<div class="meta">Fase 2 · Semana 3, jueves · 30 min</div>
+<p><strong>Objetivo:</strong> elegir los cinco procesos que vas a documentar y automatizar primero.</p>
+<p><strong>Cómo hacerlo con IA:</strong> cruza la lista del paso 13 con la clasificación del paso 8.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Esta es mi lista de procesos con su frecuencia y duración: [pega paso 13].
+Y esta mi clasificación de tareas (solo yo, delegable, automatizable): [pega paso 8].
+Calcula las horas al mes de cada proceso y elige los 5 que más tiempo me devolverían si los documento y automatizo.
+Ordénalos por horas recuperadas y dificultad (fácil, media, difícil). Empieza por los fáciles que más horas suman.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo las horas al mes de cada proceso</li>
+<li>He elegido 5 procesos prioritarios</li>
+<li>Están ordenados por impacto y dificultad</li>
+<li>Sé cuántas horas al mes suman entre los 5</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> empezar por el proceso más complicado porque es el que más molesta. Empieza por el fácil que más horas suma: ganarás confianza y tiempo para los difíciles.</p>
+</section>
+<section class="paso"><div class="paso-num">15</div><h3>Documenta el primer proceso hablando</h3>
+<div class="meta">Fase 2 · Semana 3, viernes · 45 min</div>
+<p><strong>Objetivo:</strong> convertir el proceso número 1 en un procedimiento escrito, paso a paso, que otra persona pueda seguir sin preguntarte.</p>
+<p><strong>Cómo hacerlo con IA:</strong> la próxima vez que hagas ese proceso, grábate la pantalla o el móvil mientras lo explicas en voz alta. Si no puedes, dicta la explicación. Pasa la transcripción (o el audio, si tu herramienta lo admite) a Claude.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Esta es la transcripción de cómo hago este proceso: [pega].
+Conviértela en un procedimiento claro con este formato:
+- Nombre del proceso y para qué sirve
+- Cuándo se hace y quién lo hace
+- Qué hace falta antes de empezar (accesos, datos, plantillas)
+- Pasos numerados, uno por acción, con el resultado esperado de cada paso
+- Errores frecuentes y cómo evitarlos
+- Cómo se sabe que está bien hecho
+Si hay huecos en mi explicación, pregúntame antes de rellenarlos. No inventes pasos.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>He grabado o dictado el proceso mientras lo hacía</li>
+<li>El procedimiento escrito tiene todos los apartados</li>
+<li>He respondido a las dudas de la IA</li>
+<li>Alguien de mi equipo (o yo, fingiendo no saber) lo ha seguido sin preguntar</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> escribir el procedimiento de memoria en vez de mientras lo haces. Siempre se te olvidan los pasos que haces en automático.</p>
+</section>
+<section class="paso"><div class="paso-num">16</div><h3>Documenta los otros cuatro</h3>
+<div class="meta">Fase 2 · Semana 4, lunes · 90 min</div>
+<p><strong>Objetivo:</strong> tener por escrito los cinco procesos prioritarios.</p>
+<p><strong>Cómo hacerlo con IA:</strong> repite el método del paso 15 con los procesos 2 a 5. Puedes grabar los cuatro en una tarde y pedírselos a Claude en una sola conversación, usando el primero como modelo.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Este es un procedimiento que ya tengo bien escrito: [pega el del paso 15].
+Ahora te paso las transcripciones de otros 4 procesos: [pega].
+Escribe los 4 con el mismo formato y el mismo nivel de detalle.
+Al final de cada uno, añade una línea: «Se puede automatizar: sí / en parte / no» y qué parte exactamente.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Los 5 procesos están escritos con el mismo formato</li>
+<li>Cada uno indica qué parte se puede automatizar</li>
+<li>Están guardados en una carpeta compartida con nombre claro</li>
+<li>He corregido los pasos que la IA interpretó mal</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> guardar cada procedimiento en un sitio distinto. Una sola carpeta, «Procesos», y un documento por proceso.</p>
+</section>
+<section class="paso"><div class="paso-num">17</div><h3>El proyecto de Claude con todo tu negocio</h3>
+<div class="meta">Fase 2 · Semana 4, martes · 45 min</div>
+<p><strong>Objetivo:</strong> crear en Claude un espacio con el contexto de tu negocio para que cada conversación empiece sabiendo quién eres, qué vendes y cómo hablas.</p>
+<p><strong>Cómo hacerlo con IA:</strong> en Claude, crea un Proyecto llamado con el nombre de tu negocio. Sube los procedimientos, tu lista de precios, tu resumen de la fase 1 y dos o tres mensajes que hayas escrito tú a clientes. En las instrucciones del proyecto pega esto, adaptado:</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Trabajas para [nombre del negocio], que [qué hace] para [qué clientes] en [zona].
+Precios y servicios: están en los documentos del proyecto; no inventes precios que no estén ahí.
+Tono: cercano y directo, de tú, frases cortas, sin tecnicismos ni emojis.
+Cuando escribas a clientes, usa como modelo mis mensajes de ejemplo.
+Si te falta un dato, pregunta antes de suponerlo.
+Nunca prometas plazos, descuentos ni resultados que no estén en los documentos.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>El proyecto está creado con instrucciones</li>
+<li>He subido procedimientos, precios, resumen y mensajes de ejemplo</li>
+<li>He probado a pedirle un mensaje a un cliente y suena como yo</li>
+<li>He corregido las instrucciones con lo que no me gustó</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> empezar cada conversación de cero y explicar tu negocio una y otra vez. El contexto se escribe una vez y se reutiliza siempre.</p>
+</section>
+<section class="paso"><div class="paso-num">18</div><h3>Las 20 preguntas que te hacen siempre</h3>
+<div class="meta">Fase 2 · Semana 4, miércoles · 45 min</div>
+<p><strong>Objetivo:</strong> tener respondidas, con tu tono, las preguntas que más se repiten de clientes y de gente interesada.</p>
+<p><strong>Cómo hacerlo con IA:</strong> copia de WhatsApp, Instagram y correo las preguntas que más te hacen (exporta un par de chats si hace falta, quitando datos personales). Dentro de tu proyecto de Claude:</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Estas son preguntas reales que me hacen clientes y gente interesada: [pega].
+1. Agrúpalas y quédate con las 20 más frecuentes.
+2. Para cada una, escribe la respuesta como la escribiría yo, usando los documentos del proyecto.
+3. Si una respuesta necesita un dato que no tienes, márcala con [FALTA] en vez de inventarlo.
+4. Termina cada respuesta con una pregunta o un siguiente paso que acerque a la venta, sin presionar.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo las 20 preguntas más frecuentes</li>
+<li>Cada una tiene su respuesta con mi tono</li>
+<li>He completado los huecos marcados con [FALTA]</li>
+<li>Las respuestas están guardadas en el proyecto y como respuestas rápidas en WhatsApp Business</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> respuestas que contestan y se quedan ahí. Cada respuesta debe proponer el siguiente paso: una llamada, un presupuesto, una cita.</p>
+</section>
+<section class="paso"><div class="paso-num">19</div><h3>Tu primera skill: una tarea repetitiva que ya no haces a mano</h3>
+<div class="meta">Fase 2 · Semana 4, jueves · 60 min</div>
+<p><strong>Objetivo:</strong> convertir una tarea que repites (presupuestos, propuestas, informes, fichas de cliente) en una skill de Claude que la hace siempre igual y bien.</p>
+<p><strong>Cómo hacerlo con IA:</strong> una skill es un archivo de instrucciones que Claude sigue cada vez que haces esa tarea. Puedes subirla en la app de Claude desde los ajustes (apartado de capacidades) o instalarla en Claude Code. Elige la tarea del top 5 que tenga un resultado más estándar y pide que te la escriba:</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Quiero crear una skill de Claude para esta tarea: [por ejemplo, hacer presupuestos].
+Así la hago hoy: [pega el procedimiento del paso 15 o 16]. Aquí tienes 2 ejemplos buenos ya hechos: [pega].
+Escribe el archivo SKILL.md con:
+- name y description en el encabezado (la description dice cuándo usarla, con las frases que yo diría)
+- qué datos debe pedirme antes de empezar
+- los pasos exactos y el formato del resultado
+- comprobaciones antes de darme el resultado (precios del documento, sin errores de cálculo)
+Después pruébala conmigo con un caso real.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>La skill está creada e instalada</li>
+<li>La he probado con un caso real</li>
+<li>El resultado es igual o mejor que el que hago a mano</li>
+<li>He apuntado cuánto tardaba antes y cuánto tardo ahora</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> crear la skill sin ejemplos buenos. La IA copia el nivel de los ejemplos que le das; si no le das ninguno, se lo inventa.</p>
+</section>
+<section class="paso"><div class="paso-num">20</div><h3>Tu primera automatización en n8n</h3>
+<div class="meta">Fase 2 · Semana 4, viernes · 60 min</div>
+<p><strong>Objetivo:</strong> tener funcionando una automatización sencilla que te quite una tarea de copiar y pegar.</p>
+<p><strong>Cómo hacerlo con IA:</strong> crea tu cuenta en n8n Cloud (o instálalo en tu servidor). Empieza por algo simple: cuando alguien rellena el formulario de tu web, sus datos se guardan en una hoja de Google y te llega un aviso. Pide a Claude que te guíe clic a clic.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Soy principiante en n8n. Quiero esta automatización: [cuando pase X, que se haga Y y me avise por Z].
+Uso estas herramientas: [formulario de la web, Google Sheets, correo/Telegram/Slack].
+Guíame paso a paso, nodo por nodo: qué nodo añadir, qué poner en cada campo y cómo conectar cada cuenta.
+Dime cómo probarla con un dato de prueba antes de activarla.
+Si es más fácil con otro enfoque, dímelo antes de empezar.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo cuenta en n8n</li>
+<li>La automatización funciona con un dato de prueba</li>
+<li>Está activada</li>
+<li>He comprobado durante el día que salta con datos reales</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> querer automatizar el proceso entero el primer día. Primero una pieza pequeña que funcione; luego le añades más.</p>
+</section>
+<section class="paso"><div class="paso-num">21</div><h3>Cobros y facturas que se persiguen solos</h3>
+<div class="meta">Fase 2 · Semana 5, lunes · 60 min</div>
+<p><strong>Objetivo:</strong> dejar de perseguir pagos a mano: recordatorios automáticos antes y después del vencimiento.</p>
+<p><strong>Cómo hacerlo con IA:</strong> si tu programa de facturación ya manda recordatorios, actívalos y redacta los textos con Claude. Si no, monta en n8n un flujo que lea una hoja de facturas pendientes cada mañana y mande el recordatorio que toque.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Quiero automatizar los recordatorios de pago. Mis facturas pendientes están en [programa u hoja] con estas columnas: [columnas].
+1. Escribe 3 mensajes de recordatorio con mi tono: 3 días antes del vencimiento, el día del vencimiento y 7 días después.
+   Amables, claros, con el importe, la fecha y cómo pagar. El tercero, firme pero educado.
+2. Guíame para montarlo en n8n: cada mañana, leer las facturas, ver cuál toca y enviar el correo correspondiente.
+3. Que me avise a mí de las que lleven más de 15 días vencidas para llamar yo.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo los 3 mensajes de recordatorio escritos y revisados</li>
+<li>El flujo funciona con una factura de prueba</li>
+<li>Me llega el aviso de las facturas muy atrasadas</li>
+<li>He apuntado cuánto dinero tengo hoy pendiente de cobro</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> mandar el recordatorio a quien ya ha pagado. Antes de activarlo, asegúrate de que la hoja o el programa marcan las facturas cobradas el mismo día.</p>
+</section>
+<section class="paso"><div class="paso-num">22</div><h3>Reuniones que se resumen solas</h3>
+<div class="meta">Fase 2 · Semana 5, martes · 30 min</div>
+<p><strong>Objetivo:</strong> que cada llamada con clientes o con el equipo acabe con un resumen y una lista de tareas sin que tengas que escribir nada.</p>
+<p><strong>Cómo hacerlo con IA:</strong> instala Fathom (plan gratuito) y conéctalo a tu calendario y a Zoom, Google Meet o Teams. Avisa siempre a la otra persona de que la llamada se graba. Después, pasa los resúmenes por tu proyecto de Claude con este prompt:</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Este es el resumen y la transcripción de una reunión: [pega].
+Dame:
+1. Tres líneas con lo que se ha decidido.
+2. Tareas: quién, qué y para cuándo.
+3. Lo que el cliente ha dicho con sus palabras sobre sus problemas y objeciones (literal, para usarlo en ventas).
+4. El correo de seguimiento para mandarle hoy, con mi tono.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Fathom está instalado y conectado al calendario</li>
+<li>Aviso del grabado al empezar cada llamada</li>
+<li>He probado el prompt con una reunión real</li>
+<li>El correo de seguimiento sale el mismo día de la llamada</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> grabar sin avisar. Además de ser poco elegante, en España necesitas informar a la otra persona. Una frase al empezar basta.</p>
+</section>
+<section class="paso"><div class="paso-num">23</div><h3>Claude para tu equipo, con normas</h3>
+<div class="meta">Fase 2 · Semana 5, miércoles · 60 min</div>
+<p><strong>Objetivo:</strong> que tu equipo use la IA bien y con las mismas reglas, en vez de que cada uno haga la guerra por su cuenta.</p>
+<p><strong>Cómo hacerlo con IA:</strong> prepara una sesión de una hora con tu equipo. Pide a Claude el guion y las normas. Si sois varios, valora el plan de equipo de Claude (comprueba su precio actual) o empieza compartiendo el proyecto.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Tengo un equipo de [nº] personas que hacen [roles]. Quiero formarles en una hora para usar Claude en su trabajo.
+1. Escribe un guion de 60 minutos: qué es, 3 ejercicios prácticos con tareas reales de su puesto, y dudas.
+2. Escribe una página de normas de uso: qué datos nunca se meten (DNI, datos de salud, contraseñas, datos bancarios),
+   qué hay que revisar siempre antes de mandar algo, y a quién preguntar.
+3. Para cada rol, 3 prompts listos para usar en su día a día.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>He hecho la sesión con el equipo</li>
+<li>Las normas de uso están escritas y compartidas</li>
+<li>Cada persona tiene sus 3 prompts para su puesto</li>
+<li>He fijado una fecha dentro de dos semanas para ver cómo lo están usando</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> dar acceso sin normas. El primer problema serio suele ser alguien pegando datos de clientes que no debería o mandando un texto sin revisar.</p>
+</section>
+<section class="paso"><div class="paso-num">24</div><h3>Revisión de la fase 2: horas recuperadas</h3>
+<div class="meta">Fase 2 · Semana 5, jueves · 45 min</div>
+<p><strong>Objetivo:</strong> medir cuántas horas te ha devuelto esta fase y decidir qué sigue en la cola.</p>
+<p><strong>Cómo hacerlo con IA:</strong></p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Hace tres semanas mi semana era así: [pega el resumen del paso 7].
+Esto es lo que he montado en la fase de operaciones: [procedimientos, proyecto de Claude, respuestas, skill, automatizaciones, recordatorios, resúmenes, formación].
+Esta semana he trabajado así: [horas por categoría, aunque sea estimado].
+1. Calcula las horas a la semana recuperadas y su valor en euros con mi hora a [X] €.
+2. Dime qué de lo montado no se está usando y por qué puede ser.
+3. Propón los 3 siguientes procesos a documentar o automatizar cuando tenga un rato.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Sé cuántas horas a la semana he recuperado</li>
+<li>He detectado lo que no se está usando</li>
+<li>Tengo la cola de los siguientes procesos a automatizar</li>
+<li>He apuntado el resultado junto al resumen del «antes»</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> montar cosas y no comprobar si se usan. Una automatización apagada o una skill que nadie abre no te devuelve ni un minuto.</p>
+</section>
+<section class="fase"><div class="fase-num">Fase 3 de 5</div><h2>Captación</h2><div class="fase-pasos">Pasos 25 a 36</div><p class="fase-intro">Con los números claros y las operaciones en orden, ya puedes recibir más clientes sin ahogarte. Esta fase no va de conseguir más leads todavía: va de no perder los que ya te llegan. Que cada contacto entre en un sitio, reciba respuesta rápida y tenga seguimiento hasta que diga sí o no.</p></section>
+<section class="paso"><div class="paso-num">25</div><h3>Tu cliente ideal, con datos y no con intuición</h3>
+<div class="meta">Fase 3 · Semana 5, viernes · 45 min</div>
+<p><strong>Objetivo:</strong> describir a tu mejor cliente a partir de tus clientes reales, no de lo que te gustaría.</p>
+<p><strong>Cómo hacerlo con IA:</strong> saca de tus facturas los 10 clientes que más margen te han dejado y los 5 que más problemas te han dado. Quita los nombres si quieres.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Estos son mis 10 mejores clientes por margen y mis 5 peores (más problemas, impagos, regateos): [datos: sector, tamaño, de dónde vino, qué compró, cuánto, cuánto tardó en decidir].
+1. Encuentra qué tienen en común los mejores y qué los diferencia de los peores.
+2. Describe a mi cliente ideal en un párrafo: quién es, qué problema tiene, qué le hace decidirse y dónde está.
+3. Dame 5 señales para detectar en la primera conversación si un lead se parece a los mejores o a los peores.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>He analizado mis 10 mejores y 5 peores clientes</li>
+<li>Tengo descrito a mi cliente ideal en un párrafo</li>
+<li>Tengo 5 señales para reconocerlo pronto</li>
+<li>Lo he guardado en mi proyecto de Claude</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> describir al cliente que te gustaría tener en vez de al que ya te compra y te deja margen. Empieza por los datos.</p>
+</section>
+<section class="paso"><div class="paso-num">26</div><h3>De dónde te llegan los leads y cuánto vale cada fuente</h3>
+<div class="meta">Fase 3 · Semana 6, lunes · 45 min</div>
+<p><strong>Objetivo:</strong> saber qué canales te traen clientes de verdad y cuáles solo te traen mensajes.</p>
+<p><strong>Cómo hacerlo con IA:</strong> para los clientes del último semestre, apunta por dónde llegaron (recomendación, Google, Instagram, anuncios, web, ferias). Si no lo sabes, pregúntaselo a los más recientes.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Estos son mis clientes de los últimos 6 meses con su fuente de origen y lo que facturaron: [tabla].
+Y esto es lo que gasto en cada canal (dinero y horas): [lista].
+1. Ordena las fuentes por clientes conseguidos, por facturación y por coste.
+2. Dime qué fuente me da los mejores clientes y cuál me da más trabajo para menos venta.
+3. Propón cómo apuntar a partir de hoy la fuente de cada lead nuevo sin que se me olvide.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Sé de dónde vino cada cliente del último semestre</li>
+<li>Tengo las fuentes ordenadas por resultado</li>
+<li>Sé qué canal me trae los mejores clientes</li>
+<li>He decidido cómo registrar la fuente de cada lead nuevo</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> fiarte de la memoria. «Casi todos vienen por recomendación» suele ser falso cuando miras los datos.</p>
+</section>
+<section class="paso"><div class="paso-num">27</div><h3>Monta el CRM con tus etapas</h3>
+<div class="meta">Fase 3 · Semana 6, martes · 60 min</div>
+<p><strong>Objetivo:</strong> tener un CRM donde cada lead y cada cliente tiene su ficha y su etapa.</p>
+<p><strong>Cómo hacerlo con IA:</strong> crea tu cuenta de HubSpot (empieza con el plan gratuito; pasa a Starter cuando necesites automatizaciones o más funciones). Configura un pipeline con las etapas de tu embudo del paso 4. Si ya usas otro CRM que te funcione, quédate con él.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Voy a configurar HubSpot para mi negocio. Mi embudo es: [pega paso 4]. Mi cliente ideal: [pega paso 25].
+1. Propón las etapas del pipeline de ventas (máximo 7) y qué tiene que pasar para mover un lead de una a otra.
+2. Propón las propiedades personalizadas que necesito en cada contacto (fuente, servicio de interés, presupuesto, etc.), sin pasarte.
+3. Guíame clic a clic para crearlas en HubSpot.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo la cuenta del CRM creada</li>
+<li>El pipeline tiene mis etapas</li>
+<li>He creado las propiedades necesarias (y no más)</li>
+<li>He metido a mano un lead de prueba y lo he movido por todas las etapas</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> crear veinte campos y doce etapas. Un CRM que da pereza rellenar se abandona en dos semanas.</p>
+</section>
+<section class="paso"><div class="paso-num">28</div><h3>Mete tus contactos y limpia la base</h3>
+<div class="meta">Fase 3 · Semana 6, miércoles · 60 min</div>
+<p><strong>Objetivo:</strong> tener en el CRM todos tus clientes y leads, sin duplicados y con su etapa.</p>
+<p><strong>Cómo hacerlo con IA:</strong> exporta contactos del móvil, del correo, de tu programa de facturación y de cualquier hoja que tengas. Junta todo en un CSV y pídele a Claude que lo limpie antes de importarlo.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Te paso varios archivos de contactos de mi negocio: [adjunta].
+1. Únelos en una sola tabla con estas columnas: nombre, apellidos, empresa, email, teléfono, fuente, etapa, última interacción, notas.
+2. Elimina duplicados (mismo email o mismo teléfono) quedándote con el dato más completo.
+3. Normaliza los teléfonos al formato +34 y pon en minúsculas los emails.
+4. Marca la etapa según lo que sepas: cliente, lead activo, lead frío o presupuesto no cerrado.
+5. Devuélveme un CSV listo para importar en HubSpot y una lista de los contactos dudosos.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Todos los contactos están en un solo archivo limpio</li>
+<li>No hay duplicados</li>
+<li>Los he importado en el CRM con su etapa</li>
+<li>He revisado a mano los contactos dudosos</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> importar contactos a los que luego vas a mandar comunicaciones comerciales sin que te hayan dado permiso. Distingue clientes y personas que te escribieron de listas compradas o sacadas de internet.</p>
+</section>
+<section class="paso"><div class="paso-num">29</div><h3>Que todos los leads entren solos al CRM</h3>
+<div class="meta">Fase 3 · Semana 6, jueves · 60 min</div>
+<p><strong>Objetivo:</strong> que cada persona que te escribe por la web, un formulario o un anuncio aparezca en el CRM sin que nadie copie nada.</p>
+<p><strong>Cómo hacerlo con IA:</strong> usa las integraciones nativas de HubSpot para tu formulario web y para los formularios de anuncios de Meta. Para el resto de canales, amplía la automatización de n8n del paso 20.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Mis leads llegan por: [web, formulario de anuncios, Instagram, WhatsApp, correo, teléfono].
+Uso HubSpot y n8n.
+1. Para cada canal, dime la forma más sencilla de que el lead entre en HubSpot automáticamente (integración nativa o n8n).
+2. Guíame para montar la del canal que más leads trae.
+3. Que cada lead entre con su fuente rellenada y en la primera etapa, y que me llegue un aviso.
+4. Para los canales que no se puedan automatizar, dame un procedimiento de 2 minutos para meterlos a mano.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>El canal principal mete los leads solo en el CRM</li>
+<li>Cada lead entra con su fuente</li>
+<li>Me llega un aviso por cada lead nuevo</li>
+<li>Hay un procedimiento para los canales que siguen siendo manuales</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> automatizar la entrada y no la fuente. Sin saber de dónde viene cada lead, en la fase 4 no sabrás qué canal funciona.</p>
+</section>
+<section class="paso"><div class="paso-num">30</div><h3>Respuesta en minutos, también de noche</h3>
+<div class="meta">Fase 3 · Semana 6, viernes · 60 min</div>
+<p><strong>Objetivo:</strong> que nadie que te escribe espere horas a una primera respuesta útil.</p>
+<p><strong>Cómo hacerlo con IA:</strong> monta en n8n una respuesta automática para el canal que más leads trae: cuando entra un lead, Claude (vía API, con tope de gasto puesto en la consola de Anthropic) lee su mensaje y redacta una respuesta personalizada con tus preguntas frecuentes del paso 18. Empieza enviándote el borrador a ti para aprobarlo; cuando confíes, actívala sola.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Quiero que cada lead nuevo de [canal] reciba en minutos una primera respuesta útil escrita por Claude.
+Datos: mis preguntas frecuentes y respuestas [pega paso 18], mi cliente ideal [pega paso 25] y mi tono [describe].
+1. Escribe el prompt de sistema para el nodo de Claude: responde a lo que pregunta, se presenta, hace UNA pregunta de cualificación
+   y propone el siguiente paso. Nunca da precios cerrados que no estén en los documentos ni promete plazos.
+2. Guíame para montarlo en n8n: entrada del lead, nodo de Claude, envío del borrador a mi Telegram o correo para aprobar.
+3. Dime cómo pasarlo a envío automático cuando lo haya revisado durante una semana.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>El flujo genera una respuesta para cada lead nuevo</li>
+<li>Reviso los borradores antes de que salgan</li>
+<li>He corregido el prompt con los fallos de la primera semana</li>
+<li>He vuelto a medir mi tiempo de respuesta (compáralo con el paso 9)</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> que la respuesta automática suene a robot o diga algo falso. Revisa una semana entera de borradores antes de dejarla sola.</p>
+</section>
+<section class="paso"><div class="paso-num">31</div><h3>El guion que separa curiosos de compradores</h3>
+<div class="meta">Fase 3 · Semana 7, lunes · 45 min</div>
+<p><strong>Objetivo:</strong> tener las preguntas exactas que te dicen, en tres o cuatro mensajes, si un lead merece una llamada.</p>
+<p><strong>Cómo hacerlo con IA:</strong></p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Mi cliente ideal: [pega paso 25]. Mi servicio y precios: [resumen]. Las objeciones que más oigo: [lista].
+1. Escribe un guion de cualificación de 4 preguntas por mensaje, una cada vez, en este orden: situación, problema, urgencia, capacidad de inversión.
+   Que suenen naturales, no a formulario.
+2. Para cada respuesta posible, di si el lead sigue, se aparca o se descarta, y qué contestar.
+3. Respuestas a las 5 objeciones más comunes con mi tono, sin presionar.
+4. El mensaje para proponer la llamada a los que encajan, con enlace a mi agenda.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo las 4 preguntas de cualificación</li>
+<li>Sé qué hacer con cada tipo de respuesta</li>
+<li>Tengo respuestas a las 5 objeciones más comunes</li>
+<li>He creado un enlace de agenda (Google Calendar, HubSpot o la herramienta que uses)</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> preguntar el presupuesto lo primero. Primero entiende su problema; cuando le importa, el dinero se habla con naturalidad.</p>
+</section>
+<section class="paso"><div class="paso-num">32</div><h3>Un setter con IA en Instagram y WhatsApp</h3>
+<div class="meta">Fase 3 · Semana 7, martes · 90 min</div>
+<p><strong>Objetivo:</strong> que los mensajes de Instagram y WhatsApp reciban respuesta, cualificación y propuesta de llamada aunque estés ocupado.</p>
+<p><strong>Cómo hacerlo con IA:</strong> en ManyChat Pro, conecta tu Instagram y, si lo usas, WhatsApp Business. Monta un flujo que salude, haga las preguntas del paso 31 y mande tu agenda a quien encaje. Para respuestas libres, ManyChat tiene funciones de IA de pago aparte, o puedes conectarlo con n8n y Claude. Deja siempre la opción de hablar con una persona.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Voy a montar un setter en ManyChat para Instagram y WhatsApp. Mi guion de cualificación es: [pega paso 31].
+1. Diseña el flujo: mensaje de bienvenida, cada pregunta con sus botones o respuesta libre, ramas según la respuesta,
+   mensaje con la agenda y salida a una persona si lo pide o si no entiende algo.
+2. Escribe todos los mensajes con mi tono, cortos, de tú.
+3. Dime qué etiquetas poner en ManyChat para pasar luego cada lead al CRM con su etapa.
+4. Escribe 10 mensajes de prueba raros (insultos, preguntas fuera de tema, audios) y cómo debe reaccionar el flujo.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>ManyChat está conectado a Instagram (y a WhatsApp si lo uso)</li>
+<li>El flujo cualifica y manda la agenda a quien encaja</li>
+<li>Siempre hay salida a una persona</li>
+<li>He probado los 10 mensajes raros antes de activarlo</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> dejar que el bot finja ser una persona. Di que es un asistente y ofrece hablar contigo; la gente lo agradece y te ahorras malos ratos.</p>
+</section>
+<section class="paso"><div class="paso-num">33</div><h3>Seguimiento de cinco toques para los que no contestan</h3>
+<div class="meta">Fase 3 · Semana 7, miércoles · 60 min</div>
+<p><strong>Objetivo:</strong> que ningún lead se quede sin seguimiento porque se te olvidó escribirle.</p>
+<p><strong>Cómo hacerlo con IA:</strong> con HubSpot Starter puedes crear secuencias de correos; si estás en el plan gratuito, usa tareas recordatorio o un flujo de n8n que te avise cada mañana de a quién toca escribir y con qué mensaje.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Quiero una secuencia de seguimiento para leads que no contestan o no han decidido. Mi servicio: [resumen]. Mi cliente ideal: [pega].
+Escribe 5 mensajes: día 1, día 3, día 7, día 14 y día 30.
+- Cada uno aporta algo distinto: una pregunta, un caso o ejemplo real mío [pega uno], una respuesta a una objeción, un recurso útil y una despedida que deja la puerta abierta.
+- Máximo 5 líneas, con mi tono, sin «solo quería saber si...».
+- Versión para correo y versión corta para WhatsApp.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo los 5 mensajes escritos y revisados</li>
+<li>La secuencia o los recordatorios están montados</li>
+<li>La secuencia se para sola cuando el lead responde</li>
+<li>He metido en la secuencia a los leads abiertos de este mes</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> mandar cinco veces el mismo «¿has podido verlo?». Si cada mensaje no aporta algo nuevo, es spam.</p>
+</section>
+<section class="paso"><div class="paso-num">34</div><h3>Despierta la base dormida</h3>
+<div class="meta">Fase 3 · Semana 7, jueves · 60 min</div>
+<p><strong>Objetivo:</strong> recuperar ventas de antiguos clientes y presupuestos que no se cerraron.</p>
+<p><strong>Cómo hacerlo con IA:</strong> filtra en el CRM los presupuestos no cerrados de los últimos 12 meses y los clientes que no te compran desde hace más de 6. Que Claude te prepare mensajes personalizados.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Te paso una lista de contactos dormidos: [nombre, qué pidió o compró, cuándo, por qué no siguió si lo sé].
+Para cada uno, escribe un mensaje corto y personal para WhatsApp o correo:
+- Recuerda en una frase qué hablamos.
+- Da un motivo real para volver a hablar ahora: [novedad, hueco en la agenda, nuevo servicio, mejora].
+- Una sola pregunta fácil de contestar al final.
+Nada de descuentos salvo que yo te diga uno. Agrúpalos para que pueda mandarlos en 30 minutos.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>He sacado la lista de presupuestos no cerrados y clientes inactivos</li>
+<li>Cada contacto tiene su mensaje personalizado</li>
+<li>He enviado los mensajes</li>
+<li>He apuntado las respuestas en el CRM</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> mandar el mismo mensaje genérico a todos. Una sola frase personal multiplica las respuestas frente a un «hola, ¿qué tal?».</p>
+</section>
+<section class="paso"><div class="paso-num">35</div><h3>Llega a cada llamada sabiendo todo del lead</h3>
+<div class="meta">Fase 3 · Semana 7, viernes · 45 min</div>
+<p><strong>Objetivo:</strong> preparar cada llamada de venta en 5 minutos con una ficha del lead.</p>
+<p><strong>Cómo hacerlo con IA:</strong> crea una skill o guarda este prompt en tu proyecto de Claude. Antes de cada llamada, pégale lo que tengas del lead (mensajes, web, ficha del CRM).</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Tengo una llamada de venta con este lead: [pega mensajes, ficha del CRM y su web o Instagram].
+Prepárame una ficha de una página:
+1. Quién es y qué hace su negocio (solo lo que se pueda comprobar; si algo es suposición, márcalo).
+2. Su problema probable y cuánto le puede estar costando.
+3. Las 5 preguntas que le haría para entender su situación.
+4. Qué servicio mío encaja y por qué, y qué objeción es más probable.
+5. Cómo propondría el siguiente paso al final de la llamada.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>El prompt o la skill está guardado</li>
+<li>He preparado con él mi siguiente llamada</li>
+<li>Después de la llamada, he pasado el resumen de Fathom al CRM</li>
+<li>He anotado si la llamada fue mejor que las que hacía sin preparar</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> creerte todo lo que dice la ficha. La IA puede mezclar datos de otra empresa con el mismo nombre; comprueba lo importante antes de decirlo en la llamada.</p>
+</section>
+<section class="paso"><div class="paso-num">36</div><h3>Revisión de la fase 3: respuesta y conversión</h3>
+<div class="meta">Fase 3 · Semana 8, lunes · 45 min</div>
+<p><strong>Objetivo:</strong> comprobar si ahora pierdes menos leads que hace un mes.</p>
+<p><strong>Cómo hacerlo con IA:</strong></p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Antes de esta fase: tiempo medio de respuesta [paso 9], conversión del embudo [paso 5].
+Ahora: tiempo de respuesta [medido de nuevo], leads de este periodo [nº], llamadas [nº], ventas [nº], respuestas de la base dormida [nº].
+1. Compara antes y después y dime qué ha mejorado y qué no.
+2. Revisa 10 conversaciones del setter y la respuesta automática [pega] y dime qué falla.
+3. Dame los 3 ajustes con más impacto para el próximo mes.
+Si los datos son pocos para sacar conclusiones, dilo.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>He comparado el tiempo de respuesta con el del paso 9</li>
+<li>He comparado la conversión con la del paso 5</li>
+<li>He revisado 10 conversaciones reales de los automatismos</li>
+<li>Tengo 3 ajustes apuntados y fechados</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> juzgar la fase por las ventas de una semana. Mira la tendencia y los tiempos de respuesta; las ventas tardan más en reflejarlo.</p>
+</section>
+<section class="fase"><div class="fase-num">Fase 4 de 5</div><h2>Crecimiento</h2><div class="fase-pasos">Pasos 37 a 48</div><p class="fase-intro">Ahora sí. Con el motor arreglado, cada euro y cada hora que metas en crecer rinde. En esta fase pones a trabajar el contenido, los anuncios y los referidos, y aprendes a vender más a quien ya te compra y a que no se vaya.</p></section>
+<section class="paso"><div class="paso-num">37</div><h3>Tu oferta en una frase y en una página</h3>
+<div class="meta">Fase 4 · Semana 8, martes · 60 min</div>
+<p><strong>Objetivo:</strong> que cualquiera entienda en diez segundos qué vendes, a quién y qué consigue.</p>
+<p><strong>Cómo hacerlo con IA:</strong> dentro de tu proyecto de Claude, que ya conoce tu negocio y tu cliente ideal:</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Con lo que sabes de mi negocio y mi cliente ideal, y con estas frases literales de clientes sobre su problema [pega de los resúmenes de llamadas del paso 22]:
+1. Escribe 10 versiones de mi oferta en una frase: para quién, qué resultado, en cuánto tiempo o con qué garantía (solo si la doy).
+2. Elige las 3 mejores y explica por qué.
+3. Con la que yo elija, escribe una página de oferta: problema, solución, cómo trabajo paso a paso, qué incluye, precio o desde cuánto, preguntas frecuentes y siguiente paso.
+Usa las palabras de mis clientes, no jerga de marketing. No inventes testimonios ni cifras.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo mi oferta en una frase</li>
+<li>La he probado con 3 personas que no me conocen y la han entendido</li>
+<li>Tengo la página de oferta escrita</li>
+<li>La frase está en mi web, mi bio de Instagram y mi firma de correo</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> describir lo que haces en vez de lo que consigue el cliente. «Hacemos reformas» no vende; «tu baño nuevo en dos semanas sin que tengas que estar en casa» sí.</p>
+</section>
+<section class="paso"><div class="paso-num">38</div><h3>Treinta ideas de contenido sacadas de tus clientes</h3>
+<div class="meta">Fase 4 · Semana 8, miércoles · 45 min</div>
+<p><strong>Objetivo:</strong> tener un banco de ideas de contenido basado en las preguntas y problemas reales de tus clientes.</p>
+<p><strong>Cómo hacerlo con IA:</strong></p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Estas son las preguntas que me hacen [pega paso 18], las objeciones que oigo [pega paso 31]
+y frases literales de clientes [pega de los resúmenes de llamadas].
+Dame 30 ideas de contenido para [Instagram / LinkedIn / TikTok / YouTube], repartidas en:
+10 que resuelven una duda, 10 que rompen una creencia equivocada de mi cliente y 10 que enseñan cómo trabajo o un caso real.
+Para cada una: título o gancho de una línea, la idea en dos frases y el formato (vídeo corto, carrusel, texto).</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo 30 ideas apuntadas en una hoja</li>
+<li>Cada idea sale de algo que dijo un cliente real</li>
+<li>He marcado las 10 que más me apetece grabar</li>
+<li>Sé en qué red me voy a centrar (una, no cinco)</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> inventarte los temas pensando en lo que te gustaría contar. El contenido que vende responde a lo que tu cliente ya se pregunta.</p>
+</section>
+<section class="paso"><div class="paso-num">39</div><h3>Una grabación a la semana, varias piezas</h3>
+<div class="meta">Fase 4 · Semana 8, jueves · 60 min</div>
+<p><strong>Objetivo:</strong> montar un sistema para producir el contenido de la semana en una sola sesión.</p>
+<p><strong>Cómo hacerlo con IA:</strong> elige un día fijo. Graba 20-30 minutos respondiendo 4 o 5 ideas del banco, o graba una charla con un cliente (con su permiso). Pasa la transcripción a Claude.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Esta es la transcripción de mi grabación de esta semana: [pega].
+1. Encuentra los 5 fragmentos con más fuerza para vídeos cortos: dónde empieza y acaba cada uno y el gancho para los primeros 3 segundos.
+2. Escribe 2 carruseles de 7 diapositivas con las ideas principales.
+3. Escribe 2 publicaciones de texto y el correo semanal para mi lista.
+Mantén mis palabras; corrige solo lo necesario para que se entienda.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo un día fijo de grabación en el calendario</li>
+<li>He hecho la primera grabación</li>
+<li>He sacado al menos 5 piezas de ella</li>
+<li>He apuntado cuánto tiempo me ha llevado todo</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> grabar cada pieza por separado cada día. Te come la semana y lo acabas dejando. Una sesión, muchas piezas.</p>
+</section>
+<section class="paso"><div class="paso-num">40</div><h3>Calendario y publicación programada</h3>
+<div class="meta">Fase 4 · Semana 8, viernes · 45 min</div>
+<p><strong>Objetivo:</strong> dejar el contenido de las próximas dos semanas programado para que salga solo.</p>
+<p><strong>Cómo hacerlo con IA:</strong> usa el programador gratuito de tu red (Meta Business Suite para Instagram y Facebook, el de LinkedIn o el de YouTube). Pide a Claude el calendario.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Tengo estas piezas listas: [lista]. Publico en [red] y puedo publicar [X] veces por semana.
+1. Repártelas en un calendario de 2 semanas alternando tipos (duda, creencia, caso).
+2. Escribe el texto de cada publicación con una llamada a la acción distinta: comentar una palabra, escribir por privado, ir a la web.
+3. Dime cómo medir en 2 semanas qué tipo de pieza funciona mejor con los datos de la propia red.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo el calendario de 2 semanas</li>
+<li>Las publicaciones están programadas</li>
+<li>Cada pieza tiene una llamada a la acción</li>
+<li>He puesto un recordatorio para revisar los datos en 2 semanas</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> publicar sin llamada a la acción. Si nadie sabe qué hacer después de verte, el contenido entretiene pero no trae clientes.</p>
+</section>
+<section class="paso"><div class="paso-num">41</div><h3>Testimonios y casos de verdad</h3>
+<div class="meta">Fase 4 · Semana 9, lunes · 45 min</div>
+<p><strong>Objetivo:</strong> reunir testimonios y casos reales de tus clientes para usarlos en tu web, contenido y ventas.</p>
+<p><strong>Cómo hacerlo con IA:</strong> elige 5 clientes contentos. Pide a Claude el mensaje para pedirles el testimonio y, cuando te respondan, que lo convierta en un caso.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>1. Escribe un mensaje corto para pedir a un cliente contento un testimonio. Que le ponga fácil responder:
+   3 preguntas (cómo estaba antes, qué cambió, qué le diría a alguien que duda) y la opción de responder con un audio.
+2. Cuando te pase sus respuestas, conviértelas en un caso: situación de partida, qué hicimos, resultado.
+   Usa sus palabras literales y no añadas cifras ni resultados que no haya dicho.
+3. Recuérdame pedirle permiso por escrito para publicarlo con su nombre.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>He pedido testimonio a 5 clientes</li>
+<li>Tengo al menos 2 respuestas convertidas en caso</li>
+<li>Tengo permiso por escrito para publicarlas</li>
+<li>Están en mi web y en mi proyecto de Claude para usarlas en ventas</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> «mejorar» el testimonio con cifras que el cliente no dijo. Un testimonio inventado o exagerado te quita toda la credibilidad cuando se descubre.</p>
+</section>
+<section class="paso"><div class="paso-num">42</div><h3>Un programa de referidos sencillo</h3>
+<div class="meta">Fase 4 · Semana 9, martes · 45 min</div>
+<p><strong>Objetivo:</strong> que tus clientes contentos te traigan a otros como ellos, de forma ordenada.</p>
+<p><strong>Cómo hacerlo con IA:</strong></p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Mi negocio: [resumen]. Mi cliente ideal: [pega]. Mi margen medio por cliente: [pega paso 6].
+1. Propón 3 formas de recompensar a quien me recomienda (descuento, servicio extra, regalo, donación), con su coste para mí.
+2. Elige la más sencilla de gestionar y escribe las reglas en 5 líneas.
+3. Escribe el mensaje para presentárselo a mis clientes actuales y el momento ideal para pedirlo (justo después de un buen resultado).
+4. Dime cómo registrar en el CRM quién recomendó a quién.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo las reglas del programa escritas</li>
+<li>La recompensa es rentable según mi margen</li>
+<li>He enviado el mensaje a mis clientes actuales</li>
+<li>Las recomendaciones quedan registradas en el CRM</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> pedir recomendaciones a todo el mundo en cualquier momento. Pide justo después de que el cliente note el resultado, cuando está más contento.</p>
+</section>
+<section class="paso"><div class="paso-num">43</div><h3>Tu primera campaña de anuncios, pequeña y medida</h3>
+<div class="meta">Fase 4 · Semana 9, miércoles · 90 min</div>
+<p><strong>Objetivo:</strong> lanzar una campaña de prueba con un presupuesto que puedas perder sin problema, para aprender qué funciona.</p>
+<p><strong>Cómo hacerlo con IA:</strong> elige una sola plataforma (Meta para Instagram y Facebook, o Google si te buscan por lo que vendes). Decide el presupuesto de prueba antes de empezar: es inversión en publicidad y va aparte de las herramientas. Con tu coste máximo por cliente del paso 6:</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Quiero lanzar mi primera campaña en [Meta / Google]. Vendo [oferta del paso 37] a [cliente ideal] en [zona].
+Puedo gastar como máximo [X] € en la prueba y un cliente me deja [X] € de margen (paso 6).
+1. Dime qué objetivo de campaña elegir y por qué.
+2. Propón la segmentación más sencilla (zona, edad, intereses o palabras clave).
+3. Calcula a partir de qué coste por lead la campaña no me sale rentable con mi conversión actual [paso 5].
+4. Guíame para crearla paso a paso y para conectar los leads con mi CRM (paso 29).</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>He fijado el presupuesto máximo de prueba</li>
+<li>Sé a partir de qué coste por lead no compensa</li>
+<li>La campaña está lanzada en una sola plataforma</li>
+<li>Los leads de la campaña entran solos en el CRM con su fuente</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> lanzar anuncios sin saber cuánto puedes pagar por un cliente. Sin esa cifra, no sabrás si la campaña va bien o te está quemando dinero.</p>
+</section>
+<section class="paso"><div class="paso-num">44</div><h3>Creatividades y textos de anuncios con IA</h3>
+<div class="meta">Fase 4 · Semana 9, jueves · 60 min</div>
+<p><strong>Objetivo:</strong> tener varias versiones de anuncios para probar cuál funciona, en vez de apostar todo a una.</p>
+<p><strong>Cómo hacerlo con IA:</strong></p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Mi oferta: [paso 37]. Mi cliente ideal: [paso 25]. Frases literales de clientes: [pega].
+1. Escribe 5 ganchos distintos para anuncios: uno de dolor, uno de deseo, uno de objeción, uno de caso real y uno de curiosidad.
+2. Para cada gancho, un texto de anuncio de 3-5 líneas y un titular.
+3. Para 2 de ellos, un guion de vídeo de 20-30 segundos que pueda grabar yo con el móvil.
+No prometas resultados que no pueda demostrar ni uses testimonios que no te haya pasado.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo 5 versiones de anuncio</li>
+<li>He grabado al menos un vídeo con el móvil</li>
+<li>Están subidas a la campaña como anuncios distintos</li>
+<li>He apuntado en 7 días cuál tiene mejor coste por lead</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> cambiarlo todo a los dos días. Deja que cada anuncio acumule datos (unos días y un mínimo de impresiones) antes de decidir.</p>
+</section>
+<section class="paso"><div class="paso-num">45</div><h3>Qué más le puedes vender a quien ya te compra</h3>
+<div class="meta">Fase 4 · Semana 9, viernes · 45 min</div>
+<p><strong>Objetivo:</strong> diseñar una venta adicional o una mejora para tus clientes actuales.</p>
+<p><strong>Cómo hacerlo con IA:</strong></p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Mis servicios y márgenes: [pega paso 2]. Lo que mis clientes me piden y no ofrezco: [lista]. Problemas que tienen después de comprarme: [lista].
+1. Propón 3 ofertas para clientes actuales: una mejora del servicio, un complemento y una cuota mensual de mantenimiento o soporte.
+2. Para cada una: qué incluye, precio orientativo según mi margen, cuánto trabajo me supone y a qué clientes ofrecérsela.
+3. Elige la más fácil de vender y escribe cómo ofrecerla en una conversación natural, no como un vendedor.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo 3 ideas de venta adicional</li>
+<li>He elegido una y le he puesto precio</li>
+<li>Se la he ofrecido a 5 clientes actuales</li>
+<li>He apuntado las respuestas en el CRM</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> ofrecer la mejora antes de que el cliente haya visto el primer resultado. Primero cumple; luego ofrece más.</p>
+</section>
+<section class="paso"><div class="paso-num">46</div><h3>Detecta a los clientes que se te van a ir</h3>
+<div class="meta">Fase 4 · Semana 10, lunes · 60 min</div>
+<p><strong>Objetivo:</strong> ver antes de que pase qué clientes están a punto de dejarte, para actuar a tiempo.</p>
+<p><strong>Cómo hacerlo con IA:</strong> exporta del CRM o de tu facturación tus clientes recurrentes con la fecha de su última compra, su frecuencia habitual, sus quejas y sus pagos atrasados.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Estos son mis clientes recurrentes: [nombre, frecuencia habitual de compra, última compra, quejas o incidencias, pagos atrasados, última vez que hablamos].
+1. Marca cada cliente en verde, amarillo o rojo según el riesgo de que se vaya y explica el motivo en una línea.
+2. Para los rojos y amarillos, escribe un mensaje personal para retomar el contacto (no para venderles).
+3. Propón una regla para que el CRM o n8n me avise solo cuando un cliente pase de su frecuencia habitual sin comprar.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo a mis clientes clasificados por riesgo</li>
+<li>He contactado a los rojos esta semana</li>
+<li>Tengo la alerta automática montada o apuntada para montarla</li>
+<li>He apuntado cuántos clientes perdí el último trimestre como referencia</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> enterarte de que un cliente se ha ido cuando ya se ha ido. Casi siempre hay señales antes: compra menos, tarda en responder, se queja.</p>
+</section>
+<section class="paso"><div class="paso-num">47</div><h3>Opiniones y reseñas que se piden solas</h3>
+<div class="meta">Fase 4 · Semana 10, martes · 45 min</div>
+<p><strong>Objetivo:</strong> pedir opinión y reseña a cada cliente en el mejor momento, de forma automática.</p>
+<p><strong>Cómo hacerlo con IA:</strong> monta en n8n o en el CRM un flujo que, unos días después de terminar el servicio, mande una pregunta corta de satisfacción. A quien responda bien, se le pide la reseña en Google; a quien responda mal, te avisa a ti para llamarle.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Quiero automatizar las opiniones de mis clientes. El servicio termina cuando [momento] y lo registro en [CRM/hoja].
+1. Escribe el mensaje de satisfacción: una sola pregunta del 1 al 10 y un hueco para comentarios.
+2. Escribe el mensaje para pedir la reseña en Google a quien ponga 9 o 10, con el enlace directo.
+3. Escribe el aviso que me llega a mí si alguien pone 6 o menos, con sus datos para llamarle hoy.
+4. Guíame para montarlo en n8n.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>El flujo de satisfacción está montado</li>
+<li>Tengo el enlace directo para dejar reseña en Google</li>
+<li>Me llega el aviso de los clientes descontentos</li>
+<li>He respondido a todas las reseñas recientes de Google</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> pedir reseñas solo a los contentos y no hacer nada con los descontentos. El cliente al que llamas tras una mala nota a menudo se queda; el que ignoras se va y lo cuenta.</p>
+</section>
+<section class="paso"><div class="paso-num">48</div><h3>Revisión de la fase 4: qué canal crece y cuál cortar</h3>
+<div class="meta">Fase 4 · Semana 10, miércoles · 60 min</div>
+<p><strong>Objetivo:</strong> decidir dónde poner más tiempo y dinero y qué dejar de hacer.</p>
+<p><strong>Cómo hacerlo con IA:</strong></p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Resultados de la fase de crecimiento:
+- Contenido: [publicaciones, alcance, mensajes o leads que generó]
+- Anuncios: [gasto, leads, coste por lead, ventas]
+- Referidos: [recomendaciones recibidas, ventas]
+- Venta adicional: [ofertas hechas, aceptadas]
+- Retención: [clientes en riesgo contactados, recuperados]
+Mi coste máximo por cliente es [X] € (paso 6).
+1. Ordena los canales por rentabilidad.
+2. Dime cuál escalar, cuál mantener y cuál cortar, con el porqué en una línea.
+3. Avísame si los datos son demasiado pocos para decidir alguno.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo los resultados de cada canal en una tabla</li>
+<li>He decidido qué escalar, qué mantener y qué cortar</li>
+<li>He actualizado mis 5 números semanales con lo que ahora sí mido</li>
+<li>He apuntado el resultado junto a las revisiones anteriores</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> seguir en un canal porque «hay que estar». Si no te trae clientes y te come horas, se corta o se cambia.</p>
+</section>
+<section class="fase"><div class="fase-num">Fase 5 de 5</div><h2>Libertad</h2><div class="fase-pasos">Pasos 49 a 60</div><p class="fase-intro">El objetivo nunca fue tener más herramientas. Era que el negocio funcione sin que estés encima de todo y te deje tiempo para decidir qué quieres hacer con él. En esta última fase ves el negocio de un vistazo, delegas lo que queda, pones agentes a trabajar solos con límites claros y lo dejas todo en una revisión de una hora a la semana.</p></section>
+<section class="paso"><div class="paso-num">49</div><h3>Tu cuadro de mando en una pantalla</h3>
+<div class="meta">Fase 5 · Semana 10, jueves · 60 min</div>
+<p><strong>Objetivo:</strong> ver tus 5 números y su evolución en una sola pantalla, sin abrir cinco programas.</p>
+<p><strong>Cómo hacerlo con IA:</strong> conecta Looker Studio (gratis) a tu hoja de números semanales y, si quieres, a HubSpot. Pide a Claude que te diseñe el panel.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Mis 5 números semanales son: [pega paso 11] y están en una hoja de Google con estas columnas: [columnas].
+1. Diseña un cuadro de mando de una sola pantalla: qué gráfico para cada número y dónde colocarlo.
+2. Añade una marca de alarma para cada número con el umbral que fijé.
+3. Guíame clic a clic para montarlo en Looker Studio conectado a mi hoja.
+4. Dime qué datos que hoy apunto a mano podría traer n8n solo a la hoja.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>El cuadro de mando está montado y conectado</li>
+<li>Se ven mis 5 números y su evolución</li>
+<li>Cada número tiene su umbral de alarma</li>
+<li>Lo tengo en favoritos y lo he compartido con quien lo necesite</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> un panel precioso con datos que nadie actualiza. Si la hoja de origen no se rellena cada semana, el cuadro de mando miente.</p>
+</section>
+<section class="paso"><div class="paso-num">50</div><h3>El informe del lunes que se escribe solo</h3>
+<div class="meta">Fase 5 · Semana 10, viernes · 60 min</div>
+<p><strong>Objetivo:</strong> recibir cada lunes por la mañana un resumen de la semana con lo que importa y lo que tienes que decidir.</p>
+<p><strong>Cómo hacerlo con IA:</strong> monta en n8n un flujo programado para el lunes a primera hora: lee la hoja de números, los datos del CRM y las facturas pendientes, se los pasa a Claude por API y te manda el informe por correo o Telegram.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Quiero un informe automático cada lunes a las 8:00. Fuentes: [hoja de números, CRM, facturas pendientes].
+1. Escribe el prompt para el nodo de Claude: resumen de la semana en 5 líneas, comparación con la semana anterior,
+   números en alarma, leads calientes sin seguimiento, cobros atrasados y las 3 decisiones que debería tomar esta semana.
+   Solo con los datos recibidos; si falta uno, que lo diga en vez de inventarlo.
+2. Guíame para montarlo en n8n: disparador semanal, lectura de cada fuente, nodo de Claude y envío.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>El flujo está montado y programado</li>
+<li>He recibido el primer informe de prueba</li>
+<li>He comprobado los números del informe contra la hoja</li>
+<li>He ajustado el prompt con lo que sobraba o faltaba</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> fiarte del informe sin comprobarlo las primeras semanas. Compara los números con la hoja hasta estar seguro de que lee bien los datos.</p>
+</section>
+<section class="paso"><div class="paso-num">51</div><h3>Lo que solo puedes hacer tú</h3>
+<div class="meta">Fase 5 · Semana 11, lunes · 45 min</div>
+<p><strong>Objetivo:</strong> reducir tu lista de tareas a lo que de verdad necesita tu criterio y decidir a quién va el resto.</p>
+<p><strong>Cómo hacerlo con IA:</strong> repite la reconstrucción de la semana del paso 7 con tu semana actual y compárala.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Mi semana del paso 7 era así: [pega]. Mi semana actual es así: [pega].
+Lo que ya está automatizado o documentado: [lista].
+1. Compara las dos semanas: horas recuperadas y en qué.
+2. Lista las tareas que sigo haciendo yo y clasifícalas otra vez: solo yo, delegar a una persona, pasar a un agente de IA.
+3. Para cada tarea a delegar, dime a quién o a qué y qué necesita esa persona o agente para hacerla sin mí.
+Sé exigente: lo que pongo como «solo yo» tiene que serlo de verdad.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>He comparado mi semana actual con la del paso 7</li>
+<li>Tengo la lista de lo que solo puedo hacer yo</li>
+<li>Cada tarea a delegar tiene destino: persona o agente</li>
+<li>He elegido la primera tarea que voy a traspasar mañana</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> delegar solo lo que no te gusta. Delega lo que otro puede hacer igual de bien, aunque te guste hacerlo.</p>
+</section>
+<section class="paso"><div class="paso-num">52</div><h3>Traspasa la primera tarea a una persona</h3>
+<div class="meta">Fase 5 · Semana 11, martes · 60 min</div>
+<p><strong>Objetivo:</strong> que alguien de tu equipo (o un colaborador externo) se quede una tarea entera, con su procedimiento y su forma de medir si está bien hecha.</p>
+<p><strong>Cómo hacerlo con IA:</strong></p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Voy a traspasar esta tarea: [tarea] a [persona y rol]. El procedimiento está aquí: [pega].
+1. Escribe un plan de traspaso de 2 semanas: primero lo hago yo y mira, después lo hace y reviso, y al final lo hace sola.
+2. Define cómo sé que está bien hecha sin revisarlo todo: 2 o 3 indicadores.
+3. Escribe el mensaje para explicárselo: qué espero, qué decide sola y cuándo me tiene que preguntar.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>El plan de traspaso está escrito y compartido</li>
+<li>La persona sabe qué decide sola y qué no</li>
+<li>Hay 2 o 3 indicadores para saber si está bien hecha</li>
+<li>He puesto en el calendario la revisión del traspaso dentro de 2 semanas</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> delegar y volver a hacerlo tú en cuanto algo sale distinto a como lo harías. Si el resultado es bueno, aunque el camino sea otro, déjalo estar.</p>
+</section>
+<section class="paso"><div class="paso-num">53</div><h3>Un agente que ordena tu bandeja de entrada</h3>
+<div class="meta">Fase 5 · Semana 11, miércoles · 60 min</div>
+<p><strong>Objetivo:</strong> que cada correo nuevo llegue clasificado y con un borrador de respuesta listo para revisar.</p>
+<p><strong>Cómo hacerlo con IA:</strong> monta en n8n un flujo que lea cada correo nuevo, lo pase a Claude por API para que lo clasifique (cliente, lead, proveedor, administración, ruido) y deje un borrador de respuesta en Gmail u Outlook. Los borradores no se envían solos: los revisas tú o alguien del equipo.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Quiero un agente para mi correo con n8n y Claude. Uso [Gmail / Outlook].
+1. Escribe el prompt de sistema: clasificar cada correo en una de estas categorías [lista], marcar urgencia (alta, media, baja)
+   y escribir un borrador de respuesta con mi tono y mis documentos solo cuando tenga sentido responder.
+   Nunca aceptar compromisos, precios ni fechas en mi nombre: en esos casos, el borrador dice [REVISAR].
+2. Guíame para montarlo: disparador de correo nuevo, nodo de Claude, etiqueta en el correo y borrador guardado.
+3. Dime cómo excluir correos con datos sensibles (bancos, salud, Hacienda) para que no pasen por la IA.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>El agente clasifica los correos nuevos</li>
+<li>Los borradores aparecen en la carpeta de borradores, sin enviarse</li>
+<li>Los correos sensibles quedan fuera</li>
+<li>He revisado 20 clasificaciones y he corregido el prompt</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> dejar que envíe solo desde el primer día. Un mal correo enviado en tu nombre cuesta más que todo el tiempo que ahorra en un mes.</p>
+</section>
+<section class="paso"><div class="paso-num">54</div><h3>Un agente de seguimiento comercial que trabaja solo</h3>
+<div class="meta">Fase 5 · Semana 11, jueves · 60 min</div>
+<p><strong>Objetivo:</strong> que cada mañana tengas preparados los seguimientos del día sin abrir el CRM.</p>
+<p><strong>Cómo hacerlo con IA:</strong> monta en n8n un flujo diario que lea de HubSpot los leads y presupuestos sin actividad desde hace días, pase cada caso a Claude con su historial y te deje la lista de a quién escribir y el mensaje listo.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Quiero un agente diario de seguimiento comercial con n8n, HubSpot y Claude.
+1. Define qué leads entran cada día: etapa [X] sin actividad desde hace [X] días, presupuestos enviados sin respuesta, llamadas sin cerrar.
+2. Escribe el prompt para que Claude, con el historial de cada lead, decida el siguiente paso (mensaje, llamada o descartar)
+   y escriba el mensaje con mi tono y mi secuencia del paso 33.
+3. Que el resultado me llegue a las 9:00 como lista ordenada por probabilidad de cerrar, con el mensaje listo para copiar.
+4. Guíame para montarlo.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>El agente se ejecuta cada mañana</li>
+<li>Recibo la lista ordenada con los mensajes listos</li>
+<li>Los seguimientos que hago quedan registrados en el CRM</li>
+<li>Después de una semana, he comprobado que no se queda ningún lead sin seguimiento</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> que el agente lea datos del CRM desactualizados. Si el equipo no mueve los leads de etapa, el agente sugerirá escribir a quien ya ha comprado.</p>
+</section>
+<section class="paso"><div class="paso-num">55</div><h3>Un agente que vigila la caja</h3>
+<div class="meta">Fase 5 · Semana 11, viernes · 60 min</div>
+<p><strong>Objetivo:</strong> enterarte a tiempo de cobros atrasados, gastos raros o semanas en las que vas a ir justo de caja.</p>
+<p><strong>Cómo hacerlo con IA:</strong> con tu hoja de facturas y la exportación del banco (o la conexión que te ofrezca tu programa de facturación), monta en n8n un flujo semanal que se las pase a Claude.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Quiero un agente semanal de caja. Datos: facturas emitidas y su estado, gastos fijos del paso 3 y saldo del banco.
+1. Escribe el prompt para Claude: calcular la caja prevista para las próximas 4 semanas, listar cobros atrasados por importe
+   y detectar gastos nuevos o que han subido respecto al mes anterior.
+2. Que me avise solo si hay algo que mirar (caja por debajo de [X] €, cobro atrasado de más de [X] días, gasto nuevo); si todo está bien, una línea.
+3. Guíame para montarlo en n8n. Que solo lea datos: nada de pagos ni transferencias.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>El agente se ejecuta cada semana</li>
+<li>Me avisa solo cuando hay algo que mirar</li>
+<li>Solo tiene permiso de lectura, nunca de pago</li>
+<li>He comprobado la previsión de caja con mis números reales</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> dar a un agente acceso para mover dinero. Que lea y avise; los pagos los apruebas tú.</p>
+</section>
+<section class="paso"><div class="paso-num">56</div><h3>Límites, permisos y registro de errores</h3>
+<div class="meta">Fase 5 · Semana 12, lunes · 45 min</div>
+<p><strong>Objetivo:</strong> dejar por escrito qué puede hacer cada agente y automatización sin tu permiso, y qué pasa cuando se equivoca.</p>
+<p><strong>Cómo hacerlo con IA:</strong></p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Estos son los agentes y automatizaciones que tengo funcionando: [lista con qué hace cada uno].
+1. Haz una tabla: agente | qué hace solo | qué necesita mi aprobación | qué nunca puede hacer | quién lo revisa | cada cuánto.
+2. Propón un registro sencillo de errores (hoja con fecha, agente, qué pasó, cómo se arregló) y cómo apuntar cada fallo en 1 minuto.
+3. Dime qué agente tiene más riesgo si falla y qué control le añadirías.
+4. Recuérdame revisar los topes de gasto de la API y quién tiene acceso a cada cuenta.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo la tabla de permisos de cada agente</li>
+<li>El registro de errores está creado</li>
+<li>He revisado el tope de gasto de la API de Claude</li>
+<li>He revisado quién tiene acceso a n8n, HubSpot y ManyChat</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> montar agentes y olvidarse de ellos. Sin un responsable y una revisión fija, un fallo puede repetirse semanas sin que nadie lo vea.</p>
+</section>
+<section class="paso"><div class="paso-num">57</div><h3>Tu revisión semanal de una hora</h3>
+<div class="meta">Fase 5 · Semana 12, martes · 45 min</div>
+<p><strong>Objetivo:</strong> convertir todo el plan en un único hábito: una hora a la semana para revisar el negocio y decidir.</p>
+<p><strong>Cómo hacerlo con IA:</strong> guarda esta plantilla en tu proyecto de Claude y úsala cada lunes con el informe automático del paso 50.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Revisión semanal. Te paso el informe del lunes [pega], mi cuadro de mando [pega números] y el registro de errores [pega].
+Guíame en 60 minutos con este orden:
+1. Números (10 min): qué ha cambiado y por qué.
+2. Captación (10 min): leads, respuestas, seguimientos pendientes.
+3. Clientes (10 min): riesgo de bajas, quejas, reseñas.
+4. Agentes y automatizaciones (10 min): errores y ajustes.
+5. Decisiones (15 min): las 3 cosas más importantes de esta semana, con responsable.
+6. Cierre (5 min): qué dejo de hacer.
+Hazme las preguntas una a una y al final dame el resumen para compartir con mi equipo.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>La plantilla está guardada en mi proyecto de Claude</li>
+<li>Tengo una hora fija cada semana en el calendario</li>
+<li>He hecho la primera revisión completa</li>
+<li>El resumen ha llegado a mi equipo</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> saltarte la revisión cuando la semana va bien. Es justo cuando va bien cuando tienes la cabeza fría para decidir lo importante.</p>
+</section>
+<section class="paso"><div class="paso-num">58</div><h3>Qué pasa si algo falla o tú no estás</h3>
+<div class="meta">Fase 5 · Semana 12, miércoles · 45 min</div>
+<p><strong>Objetivo:</strong> que el negocio aguante si una herramienta se cae o si tú te vas dos semanas.</p>
+<p><strong>Cómo hacerlo con IA:</strong></p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Estas son mis herramientas, automatizaciones y agentes: [lista]. Y estas las tareas que siguen dependiendo de mí: [pega paso 51].
+1. Para cada herramienta crítica: qué pasa si deja de funcionar un día, cómo me entero y cuál es el plan manual mientras tanto.
+2. Escribe un documento «Si no estoy»: quién hace qué, qué puede decidir cada persona, a quién llamar y dónde están los accesos (sin escribir contraseñas).
+3. Dime cómo hacer copias de seguridad de mis flujos de n8n, del CRM y de mis documentos, y cada cuánto.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>Tengo un plan manual para cada herramienta crítica</li>
+<li>El documento «Si no estoy» está escrito y compartido</li>
+<li>Las contraseñas están en un gestor de contraseñas, no en documentos</li>
+<li>He hecho la primera copia de seguridad de los flujos de n8n</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> que todo el sistema dependa de una cuenta personal tuya. Las herramientas del negocio, a nombre del negocio y con acceso de al menos dos personas.</p>
+</section>
+<section class="paso"><div class="paso-num">59</div><h3>La prueba de fuego: un día entero sin tocar el negocio</h3>
+<div class="meta">Fase 5 · Semana 12, jueves · todo el día (y 30 min de revisión al día siguiente)</div>
+<p><strong>Objetivo:</strong> comprobar que el negocio funciona un día laborable completo sin ti.</p>
+<p><strong>Cómo hacerlo con IA:</strong> avisa a tu equipo, deja el documento «Si no estoy» a mano y desconecta: ni correo, ni WhatsApp del negocio, ni CRM. Al día siguiente, revisa qué pasó con Claude.</p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Ayer hice un día sin tocar el negocio. Esto es lo que ha pasado: [mensajes recibidos, lo que resolvió el equipo, lo que resolvieron los agentes, lo que se quedó esperando].
+1. Clasifica lo que pasó en: resuelto solo, resuelto por el equipo, esperó sin problema, esperó y fue un problema.
+2. Para cada cosa del último grupo, dime qué falta: un procedimiento, un permiso, una automatización o una persona.
+3. Dame la lista de ajustes para que la próxima vez puedan ser dos días.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>He pasado un día laborable sin tocar el negocio</li>
+<li>He revisado qué pasó al día siguiente</li>
+<li>Tengo la lista de lo que falta para aguantar más días</li>
+<li>He fijado la fecha de la próxima prueba, con dos días</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> mirar el móvil «solo un momento». Si miras, no sabes si el sistema aguanta solo o si lo estás sosteniendo tú otra vez.</p>
+</section>
+<section class="paso"><div class="paso-num">60</div><h3>Revisión final y los siguientes 90 días</h3>
+<div class="meta">Fase 5 · Semana 12, viernes · 90 min</div>
+<p><strong>Objetivo:</strong> comparar tu negocio de hoy con el del paso 12 y decidir, con tiempo y datos, qué quieres hacer en los próximos 90 días.</p>
+<p><strong>Cómo hacerlo con IA:</strong></p>
+<div class="prompt"><span class="etq">Prompt para pegar</span><pre>Hace 90 días mi negocio estaba así: [pega el resumen del «antes» del paso 12].
+Hoy está así: [mis 5 números, horas a la semana, tiempo de respuesta, conversión, clientes, lo montado en cada fase].
+1. Compara antes y después, número a número, sin adornar: qué ha mejorado, qué sigue igual y qué ha empeorado.
+2. Dime cuántas horas a la semana he recuperado y qué estoy haciendo con ellas.
+3. Hazme 5 preguntas para decidir hacia dónde llevar el negocio: crecer, mantener con menos horas, lanzar algo nuevo o prepararlo para venderlo.
+4. Con mis respuestas, propón las 3 prioridades de los próximos 90 días y qué fase de este plan conviene repetir primero.</pre></div>
+<p><strong>Checklist:</strong></p>
+<ul class="check">
+<li>He comparado el antes y el después con números</li>
+<li>Sé cuántas horas a la semana he recuperado</li>
+<li>He decidido hacia dónde llevar el negocio los próximos 90 días</li>
+<li>He bloqueado en el calendario la próxima revisión trimestral</li>
+</ul>
+<p class="error"><strong>Error típico:</strong> terminar el plan y dejar de revisar. Lo que montaste funciona mientras alguien lo mira una hora a la semana; sin eso, en tres meses vuelves al caos.</p>
+</section>
+<h2 class="seccion">Y ahora qué</h2>
+<p>Has medido, ordenado, captado, crecido y te has dado tiempo para decidir. Lo que montaste en estos 90 días es tuyo: tus números, tus procesos, tus agentes. Sigue con la revisión semanal y repite las fases que más te han costado.</p>
+<p>Si quieres que te ayudemos a montarlo en tu negocio o a dedicarte a montarlo para otros, escríbenos en <a href="https://sellyourai.io">https://sellyourai.io</a>.</p>
+<p>Hecho por Denis Corral · Sell Your AI</p></main></body></html>
